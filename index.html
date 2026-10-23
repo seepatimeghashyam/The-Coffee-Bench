@@ -1,300 +1,37 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bean & Bloom — coffee, delicious food, table bookings and online ordering.">
-  <title>Bean & Bloom | Your Cozy Café</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Coffee Bench — thoughtful coffee, comforting plates, and a cozy table waiting for you.">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Coffee Bench | A little pause in your day">
+  <meta property="og:description" content="Thoughtful coffee, comforting plates, and a sunlit corner that feels like yours.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23533a2c'/%3E%3Cpath d='M16 25h29v14a12 12 0 0 1-12 12h-5a12 12 0 0 1-12-12V25Zm29 4h4a7 7 0 0 1 0 14h-6' fill='none' stroke='%23f7f1e8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23 18c-3-4 3-5 0-9m11 9c-3-4 3-5 0-9' fill='none' stroke='%23e2b68c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>The Coffee Bench | A little pause in your day</title>
+  <link rel="preconnect" href="https://images.unsplash.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="logo" href="#home">☕ Bean & Bloom</a>
-
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#booking">Book a Table</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="cart-link" href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <header class="site-header" id="top"><nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="The Coffee Bench home">The Coffee <span>Bench</span></a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="index.html#story">Our story</a></li><li><a href="index.html#gallery">Gallery</a></li><li><a href="booking.html">Book a table</a></li><li><a href="index.html#contact">Visit us</a></li></ul>
+    <div class="nav-actions"><button class="account-trigger" id="account-trigger" type="button">Sign in</button><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle dark mode"><span aria-hidden="true">◐</span></button><a class="cart-link" href="order.html">Bag <span id="cart-count" aria-live="polite">0</span></a></div>
+  </nav></header>
   <main>
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">YOUR LITTLE CORNER OF COMFORT</p>
-        <h1>Good coffee.<br>Beautiful moments.</h1>
-        <p>
-          Freshly brewed coffee, delicious bites and a cozy place
-          to slow down and enjoy life.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="#menu">Explore Our Menu</a>
-          <a class="btn btn-outline" href="#booking">Book a Table</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="about section" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">OUR STORY</p>
-        <h2>A little coffee, a lot of love</h2>
-      </div>
-      <p class="about-text">
-        At Bean & Bloom, we believe the best moments happen over a
-        great cup of coffee. Come for the coffee, stay for the
-        atmosphere, and leave with a smile.
-      </p>
-    </section>
-
-    <!-- Menu -->
-    <section class="menu section" id="menu">
-      <div class="section-heading">
-        <p class="eyebrow">MADE WITH LOVE</p>
-        <h2>Explore Our Menu</h2>
-        <p>
-          Coffee, refreshing drinks and delicious café favourites.
-          Prices below are sample Bean & Bloom prices, inspired by
-          popular Bengaluru café menus.
-        </p>
-      </div>
-
-      <div class="menu-grid">
-        <article class="menu-card">
-          <div class="food-emoji">☕</div>
-          <div class="menu-card-content">
-            <h3>Cappuccino</h3>
-            <p>Rich espresso topped with silky milk foam.</p>
-            <div class="menu-card-bottom">
-              <span class="price">₹219</span>
-              <button class="add-btn" data-name="Cappuccino" data-price="219">Add to Cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <div class="food-emoji">🧋</div>
-          <div class="menu-card-content">
-            <h3>Vietnamese Shakerato</h3>
-            <p>A bold, chilled and refreshing coffee treat.</p>
-            <div class="menu-card-bottom">
-              <span class="price">₹269</span>
-              <button class="add-btn" data-name="Vietnamese Shakerato" data-price="269">Add to Cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <div class="food-emoji">🧊</div>
-          <div class="menu-card-content">
-            <h3>Classic Cold Brew</h3>
-            <p>Smooth coffee brewed slowly and served cold.</p>
-            <div class="menu-card-bottom">
-              <span class="price">₹270</span>
-              <button class="add-btn" data-name="Classic Cold Brew" data-price="270">Add to Cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <div class="food-emoji">🥐</div>
-          <div class="menu-card-content">
-            <h3>Mushroom & Cheese Croissant</h3>
-            <p>A flaky croissant with a savoury filling.</p>
-            <div class="menu-card-bottom">
-              <span class="price">₹239</span>
-              <button class="add-btn" data-name="Mushroom & Cheese Croissant" data-price="239">Add to Cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <div class="food-emoji">🥪</div>
-          <div class="menu-card-content">
-            <h3>Mexican Paneer Sandwich</h3>
-            <p>Paneer and Mexican-inspired flavours in every bite.</p>
-            <div class="menu-card-bottom">
-              <span class="price">₹320</span>
-              <button class="add-btn" data-name="Mexican Paneer Sandwich" data-price="320">Add to Cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="menu-card">
-          <div class="food-emoji">🥞</div>
-          <div class="menu-card-content">
-            <h3>Classic Pancakes</h3>
-            <p>Soft, fluffy pancakes for a cosy café breakfast.</p>
-            <div class="menu-card-bottom">
-              <span class="price">₹220</span>
-              <button class="add-btn" data-name="Classic Pancakes" data-price="220">Add to Cart</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Booking -->
-    <section class="booking section" id="booking">
-      <div class="section-heading">
-        <p class="eyebrow">YOUR TABLE IS WAITING</p>
-        <h2>Book a Table</h2>
-        <p>Choose your date, time, guests and preferred table.</p>
-      </div>
-
-      <form id="booking-form" class="booking-form">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="booking-name">Your name</label>
-            <input id="booking-name" type="text" placeholder="Enter your name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="booking-date">Date</label>
-            <input id="booking-date" type="date" required>
-          </div>
-
-          <div class="form-group">
-            <label for="booking-time">Time</label>
-            <select id="booking-time" required>
-              <option value="">Choose a time</option>
-              <option>09:00 AM</option>
-              <option>10:00 AM</option>
-              <option>11:00 AM</option>
-              <option>12:00 PM</option>
-              <option>01:00 PM</option>
-              <option>02:00 PM</option>
-              <option>03:00 PM</option>
-              <option>04:00 PM</option>
-              <option>05:00 PM</option>
-              <option>06:00 PM</option>
-              <option>07:00 PM</option>
-              <option>08:00 PM</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="guest-count">Number of guests</label>
-            <select id="guest-count" required>
-              <option value="1">1 guest</option>
-              <option value="2" selected>2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
-              <option value="5">5 guests</option>
-              <option value="6">6 guests</option>
-            </select>
-          </div>
-        </div>
-
-        <h3 class="table-heading">Choose your table</h3>
-        <div class="table-legend">
-          <span><i class="legend-dot available-dot"></i> Available</span>
-          <span><i class="legend-dot selected-dot"></i> Selected</span>
-          <span><i class="legend-dot booked-dot"></i> Booked in this session</span>
-        </div>
-
-        <div class="table-grid" id="table-grid"></div>
-        <p class="selected-table" id="selected-table" aria-live="polite">
-          No table selected yet.
-        </p>
-
-        <button class="btn submit-btn" type="submit">Request Booking</button>
-        <p class="status-message" id="booking-message" aria-live="polite"></p>
-        <p class="demo-note">
-          Demo only: bookings are not sent to the café and are not saved permanently.
-        </p>
-      </form>
-    </section>
-
-    <!-- Gallery -->
-    <section class="gallery section" id="gallery">
-      <div class="section-heading">
-        <p class="eyebrow">A TASTE OF OUR SPACE</p>
-        <h2>Moments at Bean & Bloom</h2>
-      </div>
-
-      <div class="gallery-grid">
-        <img
-          src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
-          alt="Warm and welcoming café interior" loading="lazy">
-        <img
-          src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
-          alt="Coffee shop seating area" loading="lazy">
-        <img
-          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80"
-          alt="Freshly prepared coffee" loading="lazy">
-      </div>
-    </section>
-
-    <!-- Cart -->
-    <section class="cart-section section" id="cart">
-      <div class="section-heading">
-        <p class="eyebrow">YOUR FAVOURITES</p>
-        <h2>Your Shopping Cart</h2>
-        <p>Update your items and review the total before ordering.</p>
-      </div>
-
-      <div class="cart-container">
-        <div id="cart-items" class="cart-items" aria-live="polite">
-          <p class="empty-cart">Your cart is empty. Add something delicious!</p>
-        </div>
-
-        <div class="cart-summary">
-          <div class="summary-line">
-            <span>Subtotal</span>
-            <strong id="cart-subtotal">₹0.00</strong>
-          </div>
-          <div class="summary-line">
-            <span>Estimated tax (5%)</span>
-            <strong id="cart-tax">₹0.00</strong>
-          </div>
-          <div class="summary-line total-line">
-            <span>Total</span>
-            <strong id="cart-total">₹0.00</strong>
-          </div>
-
-          <button class="btn submit-btn" id="checkout-btn" type="button">
-            Review Order
-          </button>
-          <p class="status-message" id="order-message" aria-live="polite"></p>
-          <p class="demo-note">
-            Demo only: no payment is collected and no real order is sent.
-            Tax is an illustrative estimate, not a verified tax calculation.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact section" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">COME SAY HELLO</p>
-        <h2>Visit Our Café</h2>
-      </div>
-
-      <div class="contact-details">
-        <p><strong>Opening hours:</strong> 9:00 AM – 9:00 PM</p>
-        <p><strong>Location:</strong> Your City, India</p>
-        <p><strong>Email:</strong> hello@beanandbloom.example</p>
-      </div>
-    </section>
+    <section class="hero" id="home" aria-labelledby="hero-title"><div class="hero-content reveal"><p class="eyebrow">Slow mornings, good coffee</p><h1 id="hero-title">A little pause<br>in your day.</h1><p>Thoughtful coffee, comforting plates, and a sunlit corner that feels like yours.</p><div class="hero-actions"><a class="btn btn-primary" href="menu.html">Explore the menu <span aria-hidden="true">↗</span></a><a class="text-link" href="booking.html">Find your table <span aria-hidden="true">→</span></a></div></div><div class="hero-note"><span class="note-mark">✳</span><span>Made fresh<br>with a little love</span></div></section>
+    <section class="perks" aria-label="What makes us special"><div><strong>Made fresh</strong><span>Every cup, every day</span></div><div><strong>Local & lovely</strong><span>Ingredients close to home</span></div><div><strong>Your kind of cozy</strong><span>Come as you are</span></div></section>
+    <section class="home-feature section" aria-labelledby="feature-title"><div class="home-feature-copy reveal"><p class="eyebrow">The good stuff</p><h2 id="feature-title">A menu for slow, lovely days.</h2><p>From the first sip of coffee to one more bite of something warm, find your new favourites at The Coffee Bench.</p><a class="btn btn-primary" href="menu.html">See the full menu <span aria-hidden="true">→</span></a></div><div class="feature-photo reveal"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=85" alt="Coffee and fresh pastries ready to enjoy at the café" loading="lazy"></div></section>
+    <section class="story-section section" id="story"><div class="story-image reveal"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="Sunlight falling across the warm, wood-filled interior of The Coffee Bench" loading="lazy"></div><div class="story-copy reveal"><p class="eyebrow">A seat at our table</p><h2>Good things take a little time.</h2><p>We built The Coffee Bench around the simple joy of slowing down. Thoughtful ingredients, coffee worth savouring, and room for one more at the table.</p><a class="text-link" href="booking.html">Save your seat <span aria-hidden="true">→</span></a></div></section>
+    <section class="gallery-section section" id="gallery" aria-labelledby="gallery-title"><div class="section-heading reveal"><div><p class="eyebrow">A taste of our space</p><h2 id="gallery-title">Little scenes from the Bench</h2><p>Good coffee, slow afternoons, and room to settle in.</p></div></div><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=82" alt="Cozy café seating with warm natural light" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=82" alt="Fresh coffee being prepared by a barista" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=82" alt="Coffee and a pastry set out for a relaxed café visit" loading="lazy" decoding="async"></div></section>
+    <section class="testimonial-section section" aria-labelledby="reviews-title"><div class="section-heading reveal"><p class="eyebrow">Kind words</p><h2 id="reviews-title">Little moments, loved</h2><p>A few notes from our favourite people.</p></div><div class="testimonial-grid"><article class="review-card reveal"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The kind of place where one coffee turns into a whole afternoon. Everything feels considered.”</blockquote><div class="review-author"><span class="avatar">AR</span><span><strong>Aanya R.</strong><small>Weekend regular</small></span></div></article><article class="review-card reveal"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The cold brew is lovely, the team is warmer, and I always find a reason to come back.”</blockquote><div class="review-author"><span class="avatar avatar-sage">VK</span><span><strong>Vikram K.</strong><small>Coffee enthusiast</small></span></div></article><article class="review-card reveal"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“A little hidden gem for slow brunches. Those pancakes are already a tradition.”</blockquote><div class="review-author"><span class="avatar avatar-rose">SM</span><span><strong>Sana M.</strong><small>Brunch with friends</small></span></div></article></div></section>
+    <section class="contact-section section" id="contact"><div class="contact-copy reveal"><p class="eyebrow">Come say hello</p><h2>A good coffee is close by.</h2><p class="contact-intro">Drop in for your usual or make a day of it. We’ll keep a seat warm.</p><div class="contact-detail"><span class="detail-icon" aria-hidden="true">◷</span><p><strong>Opening hours</strong><span>Every day · 9:00 AM – 9:00 PM</span></p></div><div class="contact-detail"><span class="detail-icon" aria-hidden="true">⌖</span><p><strong>Find us</strong><span>Indiranagar, Bengaluru, India</span></p></div><div class="contact-detail"><span class="detail-icon" aria-hidden="true">✉</span><p><strong>Say hello</strong><a href="mailto:hello@thecoffeebench.example">hello@thecoffeebench.example</a></p></div><a class="text-link" href="booking.html">Book your visit <span aria-hidden="true">→</span></a></div><div class="map-frame reveal"><iframe title="Map showing the Indiranagar area of Bengaluru" src="https://www.google.com/maps?q=Indiranagar,+Bengaluru,+India&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><span class="map-caption">The Coffee Bench · Bengaluru</span></div></section>
   </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2026 Bean & Bloom Café. Made with ☕ and love.</p>
-  </footer>
-
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="index.html">The Coffee <span>Bench</span></a><p>Good coffee. Good company. Come as you are.</p><div class="social-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://maps.google.com/?q=Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer">Directions ↗</a></div></div><div class="footer-bottom"><span>© 2026 The Coffee Bench</span><a href="#top">Back to the top ↑</a></div></footer>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">↑</button><div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
