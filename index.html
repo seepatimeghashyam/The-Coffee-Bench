@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bean & Bloom — coffee, delicious food, table bookings and online ordering.">
+  <title>Bean & Bloom | Your Cozy Café</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="logo" href="#home">☕ Bean & Bloom</a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#booking">Book a Table</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="cart-link" href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR LITTLE CORNER OF COMFORT</p>
+        <h1>Good coffee.<br>Beautiful moments.</h1>
+        <p>
+          Freshly brewed coffee, delicious bites and a cozy place
+          to slow down and enjoy life.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#menu">Explore Our Menu</a>
+          <a class="btn btn-outline" href="#booking">Book a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">OUR STORY</p>
+        <h2>A little coffee, a lot of love</h2>
+      </div>
+      <p class="about-text">
+        At Bean & Bloom, we believe the best moments happen over a
+        great cup of coffee. Come for the coffee, stay for the
+        atmosphere, and leave with a smile.
+      </p>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">MADE WITH LOVE</p>
+        <h2>Explore Our Menu</h2>
+        <p>
+          Coffee, refreshing drinks and delicious café favourites.
+          Prices below are sample Bean & Bloom prices, inspired by
+          popular Bengaluru café menus.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="food-emoji">☕</div>
+          <div class="menu-card-content">
+            <h3>Cappuccino</h3>
+            <p>Rich espresso topped with silky milk foam.</p>
+            <div class="menu-card-bottom">
+              <span class="price">₹219</span>
+              <button class="add-btn" data-name="Cappuccino" data-price="219">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="food-emoji">🧋</div>
+          <div class="menu-card-content">
+            <h3>Vietnamese Shakerato</h3>
+            <p>A bold, chilled and refreshing coffee treat.</p>
+            <div class="menu-card-bottom">
+              <span class="price">₹269</span>
+              <button class="add-btn" data-name="Vietnamese Shakerato" data-price="269">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="food-emoji">🧊</div>
+          <div class="menu-card-content">
+            <h3>Classic Cold Brew</h3>
+            <p>Smooth coffee brewed slowly and served cold.</p>
+            <div class="menu-card-bottom">
+              <span class="price">₹270</span>
+              <button class="add-btn" data-name="Classic Cold Brew" data-price="270">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="food-emoji">🥐</div>
+          <div class="menu-card-content">
+            <h3>Mushroom & Cheese Croissant</h3>
+            <p>A flaky croissant with a savoury filling.</p>
+            <div class="menu-card-bottom">
+              <span class="price">₹239</span>
+              <button class="add-btn" data-name="Mushroom & Cheese Croissant" data-price="239">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="food-emoji">🥪</div>
+          <div class="menu-card-content">
+            <h3>Mexican Paneer Sandwich</h3>
+            <p>Paneer and Mexican-inspired flavours in every bite.</p>
+            <div class="menu-card-bottom">
+              <span class="price">₹320</span>
+              <button class="add-btn" data-name="Mexican Paneer Sandwich" data-price="320">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="food-emoji">🥞</div>
+          <div class="menu-card-content">
+            <h3>Classic Pancakes</h3>
+            <p>Soft, fluffy pancakes for a cosy café breakfast.</p>
+            <div class="menu-card-bottom">
+              <span class="price">₹220</span>
+              <button class="add-btn" data-name="Classic Pancakes" data-price="220">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="booking section" id="booking">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR TABLE IS WAITING</p>
+        <h2>Book a Table</h2>
+        <p>Choose your date, time, guests and preferred table.</p>
+      </div>
+
+      <form id="booking-form" class="booking-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="booking-name">Your name</label>
+            <input id="booking-name" type="text" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-date">Date</label>
+            <input id="booking-date" type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-time">Time</label>
+            <select id="booking-time" required>
+              <option value="">Choose a time</option>
+              <option>09:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>01:00 PM</option>
+              <option>02:00 PM</option>
+              <option>03:00 PM</option>
+              <option>04:00 PM</option>
+              <option>05:00 PM</option>
+              <option>06:00 PM</option>
+              <option>07:00 PM</option>
+              <option>08:00 PM</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="guest-count">Number of guests</label>
+            <select id="guest-count" required>
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+            </select>
+          </div>
+        </div>
+
+        <h3 class="table-heading">Choose your table</h3>
+        <div class="table-legend">
+          <span><i class="legend-dot available-dot"></i> Available</span>
+          <span><i class="legend-dot selected-dot"></i> Selected</span>
+          <span><i class="legend-dot booked-dot"></i> Booked in this session</span>
+        </div>
+
+        <div class="table-grid" id="table-grid"></div>
+        <p class="selected-table" id="selected-table" aria-live="polite">
+          No table selected yet.
+        </p>
+
+        <button class="btn submit-btn" type="submit">Request Booking</button>
+        <p class="status-message" id="booking-message" aria-live="polite"></p>
+        <p class="demo-note">
+          Demo only: bookings are not sent to the café and are not saved permanently.
+        </p>
+      </form>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">A TASTE OF OUR SPACE</p>
+        <h2>Moments at Bean & Bloom</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <img
+          src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
+          alt="Warm and welcoming café interior" loading="lazy">
+        <img
+          src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
+          alt="Coffee shop seating area" loading="lazy">
+        <img
+          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80"
+          alt="Freshly prepared coffee" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Cart -->
+    <section class="cart-section section" id="cart">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR FAVOURITES</p>
+        <h2>Your Shopping Cart</h2>
+        <p>Update your items and review the total before ordering.</p>
+      </div>
+
+      <div class="cart-container">
+        <div id="cart-items" class="cart-items" aria-live="polite">
+          <p class="empty-cart">Your cart is empty. Add something delicious!</p>
+        </div>
+
+        <div class="cart-summary">
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <strong id="cart-subtotal">₹0.00</strong>
+          </div>
+          <div class="summary-line">
+            <span>Estimated tax (5%)</span>
+            <strong id="cart-tax">₹0.00</strong>
+          </div>
+          <div class="summary-line total-line">
+            <span>Total</span>
+            <strong id="cart-total">₹0.00</strong>
+          </div>
+
+          <button class="btn submit-btn" id="checkout-btn" type="button">
+            Review Order
+          </button>
+          <p class="status-message" id="order-message" aria-live="polite"></p>
+          <p class="demo-note">
+            Demo only: no payment is collected and no real order is sent.
+            Tax is an illustrative estimate, not a verified tax calculation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">COME SAY HELLO</p>
+        <h2>Visit Our Café</h2>
+      </div>
+
+      <div class="contact-details">
+        <p><strong>Opening hours:</strong> 9:00 AM – 9:00 PM</p>
+        <p><strong>Location:</strong> Your City, India</p>
+        <p><strong>Email:</strong> hello@beanandbloom.example</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 Bean & Bloom Café. Made with ☕ and love.</p>
+  </footer>
+
+</body>
+</html>
